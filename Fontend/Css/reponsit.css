@@ -1,0 +1,77 @@
+@media (min-width: 1024px) and (max-width: 1112px) {
+  .header__Top__Left {
+    width: 44%;
+  }
+  .header__Top__Right {
+    width: 56%;
+  }
+  .eat,
+  .banner__sale {
+    display: none;
+  }
+  .footer__top {
+    display: flex;
+    gap: 3rem;
+  }
+  .footer__one,
+  .footer__three {
+    min-width: 31rem;
+  }
+  .footer__for {
+    min-width: 25rem;
+  }
+  .footer__two {
+    display: none;
+    padding: 0;
+    min-width: 20rem;
+  }
+}
+@media (min-width: 740px) and (max-width: 1023px) {
+  .banner {
+    margin: 6rem auto;
+  }
+  .footer__top {
+    display: flex;
+    gap: 3rem;
+  }
+  .footer__one,
+  .footer__three {
+    min-width: 31rem;
+  }
+  .footer__for {
+    min-width: 30rem;
+  }
+  .footer__two {
+    padding: 0;
+    min-width: 20rem;
+  }
+  .header__pc,
+  .banner__sale {
+    display: none;
+  }
+}
+@media (max-width: 739px) {
+  .banner {
+    margin: 6rem auto;
+  }
+  .footer__top {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+  .footer__one,
+  .footer__three,
+  .footer__for {
+    min-width: fit-content;
+  }
+  .header__pc,
+  .footer__two,
+  .banner__sale {
+    display: none;
+  }
+  .form__account,
+  .layout,
+  .face__gg {
+    width: 95% !important;
+  }
+}

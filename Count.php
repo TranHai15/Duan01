@@ -7,7 +7,7 @@ if (!defined('_CODE')) {
 }
 
 const _MODULE = 'Home';
-const _ACTION = 'Nam';
+const _ACTION = 'Home';
 
 
 // thong tin ket moi database

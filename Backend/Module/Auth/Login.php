@@ -49,7 +49,7 @@ if (isPost()) {
         setflashdata('smg', "Vui Long kiem tra lai du lieu");
         setflashdata("error", $error);
         setflashdata("old", $filterAll);
-        header("Location: ?Module=Auth&action=Login");
+        location("Auth", "Login");
         exit();
     }
 }

@@ -6,7 +6,5 @@ if (!defined('_CODE')) {
 
 include "Fontend/Layout/Header.html";
 include "Fontend/Layout/Footer.html";
-if (isset($_SESSION['user'])) {
-    echo $_SESSION['user'];
-}
+
 ?>

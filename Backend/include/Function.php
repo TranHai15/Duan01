@@ -85,7 +85,7 @@ function isPhone($phone)
 
 function location($Module = "Home", $past = 'Home ')
 {
-    header("?Module=$Module&action=$past");
+    header("Location: ?Module=$Module&action=$past");
     exit;
 }
 

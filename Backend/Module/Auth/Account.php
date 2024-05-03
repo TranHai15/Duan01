@@ -53,7 +53,7 @@ if (isPost()) {
         $email = $filterAll['email'];
         $pass = $filterAll['password'];
         $password = password_hash($pass, PASSWORD_DEFAULT);
-        $_SESSION['user'] = $name;
+        $_SESSION['user'] = $email;
         $data = [
             "Name_users" => "$name",
             "Phone_users" => "$phone",
@@ -265,7 +265,6 @@ $error = getflashdata('error');
             border: 1px solid cadetblue;
             align-items: center;
             color: rgb(159, 252, 255);
-
             font-size: 1.7rem;
             font-weight: 700;
             background-color: cadetblue;
@@ -285,7 +284,7 @@ $error = getflashdata('error');
 </head>
 
 <body>
-
+    <?php include "Fontend/Layout/Header.html"; ?>
     <div class="conten">
         <p>Chào mừng bạn đến với Yody</p>
         <h1><span>ĐĂNG</span><span>KÝ</span></h1>
@@ -332,7 +331,7 @@ $error = getflashdata('error');
             </h1>
         </div>
     </div>
-
+    <?php include "Fontend/Layout/Footer.html"; ?>
 </body>
 
 <script src="Fontend/Js/validate_form.js"></script>

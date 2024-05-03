@@ -3,8 +3,60 @@
 if (!defined('_CODE')) {
     die('Truy cập không hợp lệ');
 }
+if (isPost()) {
+    $filterAll = filter();
+    $error = []; // mang chua cac loi
+    // validate name
+    // validate email
+    if (empty($filterAll['email'])) {
+        $error['email']['required'] = "Email bat buoc phai nhap";
+    } else {
+        $email = $filterAll['email'];
+        $sql = "SELECT Id_users FROM users WHERE Email_users = '$email' ";
 
-
+        if (demdulieu($sql) <= 0) {
+            $error['email']['unique'] = "Email Khong ton tai";
+        }
+    }
+    // validate password
+    if (empty($filterAll['password'])) {
+        $error['password']['required'] = 'Mat khau khong duoc de trong';
+    } elseif (strlen($filterAll['password']) < 8) {
+        $error['password']['min'] = 'Mat Khau phai lon hon 6 ki tu';
+    } else {
+        $email = $filterAll['email'];
+        $password = $filterAll['password'];
+        $sql = "SELECT Password_users FROM users WHERE Email_users = :email";
+        $statement = $conn->prepare($sql);
+        $statement->bindParam(':email', $email);
+        $statement->execute();
+        $dataFeth = $statement->fetch(PDO::FETCH_ASSOC);
+        if ($dataFeth) {
+            $pass_database = $dataFeth['Password_users'];
+            if (password_verify($password, $pass_database)) {
+                $_SESSION['user'] = $filterAll['email'];
+                setflashdata('sol', "Dang Nhap Thanh Cong");
+                location();
+                exit();
+            } else {
+                $error['password']['database'] = "Mat Khau Khong Chinh Xac";
+            }
+        } else {
+            $error['email']['min'] = 'Email Khong Ton tai';
+        }
+    }
+    if (!empty($error)) {
+        setflashdata('smg', "Vui Long kiem tra lai du lieu");
+        setflashdata("error", $error);
+        setflashdata("old", $filterAll);
+        header("Location: ?Module=Auth&action=Login");
+        exit();
+    }
+}
+$smg = getflashdata('smg');
+$smg_type = getflashdata('sol');
+$old = getflashdata('old');
+$error = getflashdata('error');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -203,25 +255,41 @@ if (!defined('_CODE')) {
 
         }
 
-        .error_cha {
-            display: none;
+        .thanhcong {
+            width: 70%;
+            display: flex;
+            justify-content: center;
+            margin: 1rem auto 1rem auto;
+            height: 5rem;
+            border: 1px solid cadetblue;
+            align-items: center;
+            color: rgb(159, 252, 255);
+            font-size: 1.7rem;
+            font-weight: 700;
+            background-color: cadetblue;
+            border-radius: 5px;
         }
     </style>
 </head>
 
 <body>
-
+    <?php  ?>
     <div class="conten">
         <p>Chào mừng bạn đến với Yody</p>
         <h1> <span>ĐĂNG</span><span>NHẬP</span> </h1>
         <div class="error_cha">
-            <div class="error"></div>
-        </div>
+            <?php if (!empty($smg) || !empty($smg_type)) {
+                if (isset($smg)) {
+                    echo  "  <div class='error'>  $smg</div>";
+                } else {
+                    echo "<div class='thanhcong'> $smg_type</div>";
+                }
+            }   ?></div>
         <form action="#" method="post" onsubmit=" return validate__login()" class="form__account">
-            <input oninput="inp()" type="email" name="email" id="email" placeholder=" Địa chỉ Email">
-            <div class="error_con email"></div>
-            <input oninput="inp()" type="password" name="password" id="password" placeholder=" Mật Khẩu">
-            <div class="error_con password"></div>
+            <input oninput="inp()" type="email" name="email" id="email" placeholder=" Địa chỉ Email" value="<?php echo (!empty($old['email'])) ? $old['email'] : null; ?>">
+            <div class="error_con"> <?php echo (!empty($error['email'])) ? "<div class=' email'> " . reset($error['email']) . "</div>" : null;     ?> </div>
+            <input oninput="inp()" type="password" name="password" id="password" placeholder=" Mật Khẩu" value="<?php echo (!empty($old['password'])) ? $old['password'] : null; ?>">
+            <div class="error_con"> <?php echo (!empty($error['password'])) ? "<div class=' password'> " . reset($error['password']) . "</div>" : null;     ?> </div>
             <button onclick="btn()" type="submit">Đăng Nhập</button>
         </form>
         <div class="forgot">

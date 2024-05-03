@@ -83,9 +83,9 @@ function isPhone($phone)
 
 // ham chuyen huong
 
-function location($past = 'index.php ')
+function location($Module = "Home", $past = 'Home ')
 {
-    header("location: $past ");
+    header("?Module=$Module&action=$past");
     exit;
 }
 

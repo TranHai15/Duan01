@@ -74,4 +74,11 @@
   .face__gg {
     width: 95% !important;
   }
+  .images {
+    width: 20rem;
+    margin: 0 auto;
+  }
+  .images img {
+    width: 100%;
+  }
 }

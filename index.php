@@ -33,7 +33,7 @@ if (!empty($_GET['action'])) {
 }
 // echo $module . "<br>";
 // echo $action;
-// $path = "Backend/Product/List.php";
+// $path = "Backend/Product/Add.php";
 $path = 'Backend/' . 'Module/' . $module . '/' . $action . '.php';
 if (file_exists($path)) {
     require_once($path);

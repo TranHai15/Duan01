@@ -12,8 +12,8 @@
 .row {
   display: flex;
   flex-wrap: wrap;
-  margin-left: -4px;
-  margin-right: -4px;
+  margin-left: -10px;
+  margin-right: -10px;
 }
 
 .row.no-gutters {
@@ -26,8 +26,8 @@
   padding-right: 3px;
 }
 .col {
-  padding-left: 4px;
-  padding-right: 4px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .row.no-gutters .col {
@@ -434,7 +434,7 @@
 /* tu may tinh bang den PC */
 @media (min-width: 740px) and (max-width: 1023px) {
   .wide {
-    width: 739px;
+    width: 750px;
   }
 }
 

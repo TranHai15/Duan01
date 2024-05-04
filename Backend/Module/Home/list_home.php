@@ -14,10 +14,10 @@ if (!defined('_CODE')) {
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Raleway:ital,wght@0,100..900;1,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="Fontend/Css/resert.css?ver=12" />
+    <link rel="stylesheet" href="Fontend/Css/resert.css?ver=1" />
     <link rel="stylesheet" href="Fontend/Css/gird.css?ver=14" />
-    <link rel="stylesheet" href="Fontend/Css/Home.css?ver=43" />
-    <link rel="stylesheet" href="Fontend/Css/reponsit.css?ver=63" />
+    <link rel="stylesheet" href="Fontend/Css/Home.css?ver=3" />
+    <link rel="stylesheet" href="Fontend/Css/reponsit.css?ver=66" />
     <style>
         .container {
             background-color: beige;
@@ -29,21 +29,7 @@ if (!defined('_CODE')) {
             padding: 1.5rem 0;
         }
 
-        .product {
-            background-color: cornsilk;
-        }
 
-        .sale_items {
-            background-color: cornflowerblue;
-        }
-
-        .product_items_sp {
-            background-color: blueviolet;
-        }
-
-        .item_sp {
-            background-color: aquamarine;
-        }
 
         .images {
             width: 100%;
@@ -89,9 +75,34 @@ if (!defined('_CODE')) {
                             </ul>
 
                         </div>
-                        <div class="item_sp col l-3 m-4 c-12">aa</div>
-                        <div class="item_sp col l-3 m-4 c-12">aa</div>
-                        <div class="item_sp col l-3 m-0 c-12">aa</div>
+                        <div class="item_sp col l-3 m-4 c-12">
+                            <div class="images"><img src="https://bizweb.dktcdn.net/thumb/large/100/438/408/products/apm3299-xxm-7.jpg?v=1690163862957"></div>
+                            <div class="name">Áo Polo Nam Pique Mắt Chim Basic Co Giãn Thoáng Khí</div>
+                            <div class="price">309.303 d</div>
+                            <ul class="san">
+                                <li class="san_image"><img src="" alt=""></li>
+                            </ul>
+
+                        </div>
+                        <div class="item_sp col l-3 m-4 c-12">
+                            <div class="images"><img src="https://bizweb.dktcdn.net/thumb/large/100/438/408/products/apm3299-xxm-7.jpg?v=1690163862957"></div>
+                            <div class="name">Áo Polo Nam Pique Mắt Chim Basic Co Giãn Thoáng Khí</div>
+                            <div class="price">309.303 d</div>
+                            <ul class="san">
+                                <li class="san_image"><img src="" alt=""></li>
+                            </ul>
+
+                        </div>
+                        <div class="item_sp col l-3 m-0 c-12">
+                            <div class="images"><img src="https://bizweb.dktcdn.net/thumb/large/100/438/408/products/apm3299-xxm-7.jpg?v=1690163862957"></div>
+                            <div class="name">Áo Polo Nam Pique Mắt Chim Basic Co Giãn Thoáng Khí</div>
+                            <div class="price">309.303 d</div>
+                            <ul class="san">
+                                <li class="san_image"><img src="" alt=""></li>
+                            </ul>
+
+                        </div>
+
                     </div>
                 </div>
             </div>

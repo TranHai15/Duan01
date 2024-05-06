@@ -15,10 +15,10 @@ $ab = selsects("sp_nam");
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Raleway:ital,wght@0,100..900;1,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="Fontend/Css/resert.css?ver=15" />
-    <link rel="stylesheet" href="Fontend/Css/gird.css?ver=164" />
-    <link rel="stylesheet" href="Fontend/Css/Home.css?ver=37" />
-    <link rel="stylesheet" href="Fontend/Css/reponsit.css?ver=88" />
+    <link rel="stylesheet" href="Fontend/Css/resert.css?ver=155" />
+    <link rel="stylesheet" href="Fontend/Css/gird.css?ver=1654" />
+    <link rel="stylesheet" href="Fontend/Css/Home.css?ver=375" />
+    <link rel="stylesheet" href="Fontend/Css/reponsit.css?ver=885" />
     <style>
         body {
             font-family: "Mulish", sans-serif;
@@ -52,6 +52,7 @@ $ab = selsects("sp_nam");
             height: 100%;
         }
 
+
         .name {
             width: 100%;
             height: 3.4rem;
@@ -61,6 +62,10 @@ $ab = selsects("sp_nam");
             font-size: 1.4rem;
             font-weight: 500;
             margin-top: 1rem;
+        }
+
+        .name:hover {
+            color: #fcaf17;
         }
 
         .price {
@@ -131,23 +136,21 @@ $ab = selsects("sp_nam");
             <h1>Hang Moi Gia Tot</h1>
             <a href="#">Xem them <span>></span></a>
         </div>
-        <div class="product grid">
+        <div class="product__add grid">
             <div class="row product_items">
-                <div class="sale col l-2 m-3 c-0">
+                <div class="sale col_l l-2 m-3 c-0">
                     <div class="sale_items"><img src="https://bizweb.dktcdn.net/100/438/408/themes/949050/assets/home_preivew_sanpham_2_image_desktop.jpg" alt=""></div>
                 </div>
-                <div class="product_items_sp col l-10 m-9 c-12">
+                <div class="product_items_sp col_l l-10 m-9 c-12">
                     <div class="row product_item">
                         <?php foreach ($ab as $value => $key) :       ?>
-                            <div class="item_sp col l-3 m-4 c-6">
+                            <div class="item_sp col_l l-3 m-4 c-6">
                                 <div class="images"><img src="<?php echo $key['Anh_sp'] ?>"></div>
                                 <div class="name"><?php echo $key['Ten_sp']   ?></div>
                                 <div class="price"><?php echo $key['Gia_sp']  ?> <span class="price_old">222.087đ</span></div>
                                 <div class="search">-5%</div>
                             </div>
                         <?php endforeach;  ?>
-
-
                     </div>
                 </div>
             </div>

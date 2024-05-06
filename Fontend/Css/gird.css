@@ -29,6 +29,10 @@
   padding-left: 10px;
   padding-right: 10px;
 }
+.col_l {
+  padding-left: 10px;
+  padding-right: 10px;
+}
 
 .row.no-gutters .col {
   padding-left: 0;
@@ -151,6 +155,10 @@
   }
 
   .col {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+  .col_l {
     padding-left: 8px;
     padding-right: 8px;
   }
@@ -282,8 +290,8 @@
 
 @media (min-width: 1113px) {
   .row {
-    margin-left: -12px;
-    margin-right: -12px;
+    margin-left: -10px;
+    margin-right: -10px;
   }
 
   .row.sm-gutter {
@@ -292,8 +300,12 @@
   }
 
   .col {
-    padding-left: 12px;
-    padding-right: 12px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .col_l {
+    padding-left: 10px;
+    padding-right: 10px;
   }
 
   .row.sm-gutter .col {

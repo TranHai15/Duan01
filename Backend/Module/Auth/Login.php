@@ -273,7 +273,7 @@ $error = getflashdata('error');
 </head>
 
 <body>
-    <?php  ?>
+    <?php include "Fontend/Layout/Header.html"; ?>
     <div class="conten">
         <p>Chào mừng bạn đến với Yody</p>
         <h1> <span>ĐĂNG</span><span>NHẬP</span> </h1>

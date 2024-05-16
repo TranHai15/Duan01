@@ -14,6 +14,6 @@ const _ACTION = 'Home';
 const _HOST = "localhost";
 const _DB = "Duan01";
 const _USER = "root";
-const _PASS = "tranhai152005.";
+const _PASS = "";
 
 ?>

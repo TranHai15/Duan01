@@ -2,7 +2,7 @@
 <?php
 session_start();
 require_once('Count.php');
-require_once('Backend/include/PDO.php');
+// require_once('Backend/include/PDO.php');
 require_once('Backend/include/Database.php');
 require_once('Backend/include/Function.php');
 require_once('Backend/include/Session.php');
